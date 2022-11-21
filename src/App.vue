@@ -1,9 +1,24 @@
 <script>
+import UntoldStories from './components/UntoldStories.vue';
+
 export default {
-  name: 'App'
+  name: "App",
+  components: { UntoldStories }
 }
 </script>
 
 <template>
-  <h1 class="text-center">it works</h1>
+  <header id="site_header">
+    <UntoldStories />
+  </header>
+  <!-- /#site_header -->
+  <main id="site_main"></main>
+  <!-- /#site_main -->
+  <footer id="site_footer"></footer>
+  <!-- /#site_footer -->
 </template>
+
+
+<style lang="scss">
+
+</style>
