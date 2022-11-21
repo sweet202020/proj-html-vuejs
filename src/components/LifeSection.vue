@@ -8,7 +8,7 @@ export default {
     <section class="life">
         <div class="rectangle">
         </div>
-        <h2 class="text-center">Music Is Life</h2>
+        <h2>Music Is Life</h2>
         <hr>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vitae iure earum odit. Cumque,
             recusandae laudantium deleniti quidem aspernatur in eaque ullam dignissimos porro dolore!</p>
@@ -32,19 +32,6 @@ export default {
         top: 0;
         left: 50%;
         transform: translate(-50%);
-    }
-
-    h2 {
-        font-size: 48px;
-        font-weight: 600;
-        color: $lighter;
-    }
-
-    hr {
-        background-color: $lighter;
-        padding: 0.05rem;
-        width: 15%;
-        margin: auto;
     }
 
     p {

@@ -23,5 +23,5 @@ export default {
 
 
 <style lang="scss">
-
+@use './assets/scss/variables/variables.scss' as*;
 </style>
