@@ -20,7 +20,7 @@ export default {
         </div>
         <!-- /.tour -->
         <div class="view text-uppercase text-center">
-            view all latest news
+            view all live dates
         </div>
     </section>
     <!-- /.live_dates -->
@@ -64,11 +64,6 @@ export default {
 
     }
 
-    .view {
-        padding: 3rem 0;
-        background-color: $primary-light;
-        color: $lighter;
-        margin-top: 3rem;
-    }
+
 }
 </style>

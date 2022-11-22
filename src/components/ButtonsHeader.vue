@@ -8,8 +8,8 @@ export default {
     <h1>Untold Stories</h1>
     <p class="text-center text-white">There is an untold stories behind every favourite song.</p>
     <div class="text-center">
-        <button class="latest_album_btn text-uppercase text-white">latest album</button>
-        <button class="live_dates_btn text-uppercase text-white">live dates</button>
+        <button class="latest_album_btn text-uppercase ">latest album</button>
+        <button class="live_dates_btn text-uppercase ">live dates</button>
     </div>
 </template>
 
@@ -40,6 +40,12 @@ button {
     margin-top: 2rem;
     margin-bottom: 28rem;
     padding: 0.3rem 2.5rem;
+    color: $lighter;
+
+    &:hover {
+        background-color: $lighter;
+        color: black;
+    }
 }
 
 .latest_album_btn {

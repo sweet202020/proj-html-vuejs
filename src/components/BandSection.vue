@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'BandSection'
+    name: 'BandSection',
 }
 </script>
 <template>
@@ -110,6 +110,7 @@ export default {
         max-width: 100%;
         object-fit: cover;
 
+
     }
 
 
@@ -120,6 +121,24 @@ export default {
         border-radius: 0;
         background-color: $life;
         color: $secondary-light;
+        position: relative;
+
+        &:hover img {
+            filter: invert(35%) sepia(65%) saturate(1171%) hue-rotate(316deg) brightness(90%) contrast(76%);
+        }
+
+        &:hover h5 {
+            color: $lighter;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 300;
+        }
+
+        &:hover p {
+            display: none;
+        }
 
         h5 {
             font-weight: 600;
@@ -136,13 +155,5 @@ export default {
     .card.m_top {
         margin-top: 2.4rem;
     }
-
-    .view {
-        padding: 3rem 0;
-        background-color: $primary-light;
-        color: $lighter;
-        margin-top: 3rem;
-    }
-
 }
 </style>
