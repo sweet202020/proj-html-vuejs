@@ -26,6 +26,7 @@ export default {
 @use '../assets/scss/variables/variables.scss' as*;
 
 .jumbotron {
+    position: relative;
     background-image: url(../assets/img/home_slider.jpg);
     background-size: cover;
     background-repeat: no-repeat;

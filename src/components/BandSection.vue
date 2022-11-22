@@ -17,6 +17,7 @@ export default {
                     <div class="card">
                         <img height="300" src="../assets/img/blog_music_techo.jpg" alt="">
                         <h5>Technology and Music</h5>
+                        <h5 class="hover">Technology and Music</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non suscipit culpa, error repellat
                             enim illo
                         </p>
@@ -27,6 +28,7 @@ export default {
                             <div class="card">
                                 <img src="../assets/img/blog-post3.jpg" alt="">
                                 <h5>While my guitar gently weeps</h5>
+                                <h5 class="hover">While my guitar gently weeps</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non suscipit culpa, error
                                     repellat
                                     enim illo
@@ -39,6 +41,7 @@ export default {
                             <div class="card">
                                 <img src="../assets/img/blog-post4.jpg" alt="">
                                 <h5>It just sounds better</h5>
+                                <h5 class="hover">It just sounds better</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non suscipit culpa, error
                                     repellat
                                     enim illo
@@ -51,6 +54,7 @@ export default {
                     <div class="card">
                         <img height="300" src="../assets/img/blog_flavor_rock.jpg" alt="">
                         <h5>The flavor of rock</h5>
+                        <h5 class="hover">The flavor of rock</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non suscipit culpa, error repellat
                             enim illo
                         </p>
@@ -65,6 +69,7 @@ export default {
                     <div class="card">
                         <img src="../assets/img/blog-post1.jpg" alt="">
                         <h5>Taking it back to the old school</h5>
+                        <h5 class="hover">Taking it back to the old school</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non suscipit culpa, error repellat
                             enim illo
                         </p>
@@ -73,6 +78,7 @@ export default {
                     <div class="card m_top">
                         <img src="../assets/img/blog-post2.jpg" alt="">
                         <h5>Sharing the stage with a legend</h5>
+                        <h5 class="hover">Sharing the stage with a legend</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non suscipit culpa, error repellat
                             enim illo
                         </p>
@@ -127,17 +133,18 @@ export default {
             filter: invert(35%) sepia(65%) saturate(1171%) hue-rotate(316deg) brightness(90%) contrast(76%);
         }
 
-        &:hover h5 {
+        h5.hover {
+            display: none;
+        }
+
+        &:hover h5.hover {
+            display: block;
             color: $lighter;
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-weight: 300;
-        }
-
-        &:hover p {
-            display: none;
         }
 
         h5 {

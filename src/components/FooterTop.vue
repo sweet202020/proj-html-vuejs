@@ -1,16 +1,21 @@
 <script>
+import { store } from '../store.js'
 export default {
-    name: 'FooterTop'
+    name: 'FooterTop',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 <template>
     <div class="footer_top d-flex justify-content-between">
         <img src="../assets/img/logo_footer.png" alt="">
         <ul>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
+            <li v-for="item in store.menu"><a :class="item.a === 'home' ? 'active' : ''" :href="item.link">{{ item.a
+            }}</a>
+            </li>
         </ul>
     </div>
     <!-- /.footer_top -->
@@ -35,9 +40,17 @@ export default {
 
         li {
             a {
-                color: $lighter;
+                color: $secondary-dark;
                 text-decoration: none;
                 padding: 1rem;
+
+                &:hover {
+                    color: $lighter;
+                }
+            }
+
+            a.active {
+                color: $lighter;
             }
         }
     }
