@@ -1,6 +1,12 @@
 <script>
+import { store } from '../store.js'
 export default {
-    name: 'LiveDates.vue'
+    name: 'LiveDates.vue',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
@@ -13,43 +19,26 @@ export default {
             pariatur sit qui asperiores modi dolor quasi eum blanditiis porro.
         </p>
         <div class="tour">
-            <ul>
+            <ul v-for="map in store.maps">
                 <li>
-
-                    <h6> <span>+ </span>17/08/2020 gem festival 2020 anakalia, georgia</h6>
+                    <h6> <span>+ </span> {{ map.title }}</h6>
                     <div class="container">
                         <div class="row">
                             <div class="col-4">
-                                <img src="../assets/img/anaklia.jpeg" alt="">
+                                <img :src="store.getImagePath(`./assets/img/${map.image}`)" alt="">
+                                <!-- <img src="../assets/img/anaklia.jpeg" alt=""> -->
                             </div>
                             <!-- ./col-4 -->
                             <div class="col-8">
-                                <h5>Untold Stories</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde eius labore
-                                    veniam,
-                                    beatae voluptas quasi perferendis consectetur eaque excepturi similique! Asperiores,
-                                    doloribus accusamus ullam quisquam sequi tempora quod voluptate laborum, odio, iste
-                                    rerum quibusdam.
-                                </p>
-                                <button>book now</button>
+                                <h5>{{ map.underTitle }}</h5>
+                                <p>{{ map.paragraph }}</p>
+                                <button>{{ map.button }}</button>
                             </div>
                             <!-- ./col-8 -->
                         </div>
                         <!-- ./row -->
                     </div>
                     <!-- ./container -->
-                </li>
-                <li><span>+ </span>
-                    <h6>24/09/2020 groovfest dominical republic</h6>
-                </li>
-                <li><span>+ </span>
-                    <h6>31/10/2020 oasis festival 2020 marrakech, morocco</h6>
-                </li>
-                <li><span>+ </span>
-                    <h6> 07/11/2020 moga festival - essaquiria, morocco</h6>
-                </li>
-                <li><span>+ </span>
-                    <h6>10/12/2020 enivision - uvita, costa rica</h6>
                 </li>
             </ul>
         </div>
