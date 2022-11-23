@@ -4,7 +4,15 @@ export default {
     name: 'LiveDates.vue',
     data() {
         return {
-            store
+            store,
+        }
+    }, methods: {
+        viewMap(index) {
+            console.log(index);
+            this.store.maps[index].itemVisible = true
+            this.store.isMapVisible = index
+            console.log(this.store.isMapVisible);
+
         }
     }
 }
@@ -19,14 +27,13 @@ export default {
             pariatur sit qui asperiores modi dolor quasi eum blanditiis porro.
         </p>
         <div class="tour">
-            <ul v-for="map in store.maps">
+            <ul v-for="(map, index) in store.maps">
                 <li>
-                    <h6> <span>+ </span> {{ map.title }}</h6>
-                    <div class="container">
+                    <h6> <span @click="viewMap(index)">+ </span> {{ map.title }}</h6>
+                    <div v-if="map.itemVisible" class="container">
                         <div class="row">
                             <div class="col-4">
                                 <img :src="store.getImagePath(`./assets/img/${map.image}`)" alt="">
-                                <!-- <img src="../assets/img/anaklia.jpeg" alt=""> -->
                             </div>
                             <!-- ./col-4 -->
                             <div class="col-8">
