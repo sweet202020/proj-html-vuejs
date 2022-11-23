@@ -28,7 +28,11 @@ export default {
 .jumbotron {
     position: relative;
     background-image: url(../assets/img/home_slider.jpg);
-    background-size: cover;
+    min-height: 50rem;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+
 }
 </style>
