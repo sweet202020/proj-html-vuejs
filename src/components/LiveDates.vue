@@ -28,7 +28,9 @@ export default {
                     <div v-if="map.itemVisible" class="container">
                         <div class="row">
                             <div class="col-4">
-                                <img :src="store.getImagePath(`./assets/img/${map.image}`)" alt="">
+                                <a :href="map.link">
+                                    <img :src="store.getImagePath(`./assets/img/${map.image}`)" alt="">
+                                </a>
                             </div>
                             <!-- ./col-4 -->
                             <div class="col-8">
