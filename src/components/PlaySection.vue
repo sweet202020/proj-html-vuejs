@@ -1,7 +1,14 @@
 <script>
+import { store } from '../store.js'
 export default {
-    name: 'PlaySection'
+    name: 'PlaySection',
+    data() {
+        return {
+            store
+        }
+    }
 }
+
 </script>
 
 <template>
@@ -14,7 +21,13 @@ export default {
             inventive. I haven'th heard anything this year that's as inventive. I don't really expect to"
         </cite>
         <div class="text-center">
-            <img src="../assets/img/band_interview_play_icon.png" alt="">
+            <img @click="store.audioPlay" src="../assets/img/band_interview_play_icon.png" alt="">
+            <div class="mt-5" v-show="store.isAudioVisible">
+                <audio id="audio" controls>
+                    <source src="../assets/img/Dove si balla ( Dargen Damico feat Frati San Mauro - Sanremo 2022 ).mp3"
+                        type="audio/mpeg">
+                </audio>
+            </div>
         </div>
     </section>
     <!-- ./play -->
@@ -30,6 +43,9 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
 
+    img:hover {
+        cursor: pointer;
+    }
 
     cite {
         display: block;

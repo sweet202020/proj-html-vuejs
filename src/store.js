@@ -76,14 +76,17 @@ export const store = reactive({
     getImagePath(imgPath) {
         return new URL(imgPath, import.meta.url).href;
     },
+    isAudioVisible: false,
     isVisible: false,
-    isMapVisible: false,
     dropdown() {
         this.isVisible = !this.isVisible
     },
     viewMap(index) {
-        store.isMapVisible = index
         store.maps[index].itemVisible = !store.maps[index].itemVisible
+    },
+    audioPlay() {
+        this.isAudioVisible = !this.isAudioVisible
     }
+
 
 })
