@@ -24,7 +24,11 @@ export default {
 .play {
 
     background-image: url('../assets/img/home-testimonial-parallax.jpg');
-    padding-top: 21rem;
+    min-height: 50rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
     cite {
@@ -33,11 +37,8 @@ export default {
         width: 35%;
         margin: auto;
         font-weight: 600;
-        padding-bottom: 3rem;
+        padding-top: 20rem;
     }
 
-    img {
-        padding-bottom: 20rem;
-    }
 }
 </style>

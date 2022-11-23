@@ -6,14 +6,6 @@ export default {
         return {
             store,
         }
-    }, methods: {
-        viewMap(index) {
-            console.log(index);
-            this.store.maps[index].itemVisible = true
-            this.store.isMapVisible = index
-            console.log(this.store.isMapVisible);
-
-        }
     }
 }
 </script>
@@ -29,7 +21,10 @@ export default {
         <div class="tour">
             <ul v-for="(map, index) in store.maps">
                 <li>
-                    <h6> <span @click="viewMap(index)">+ </span> {{ map.title }}</h6>
+                    <h6> <span @click="store.viewMap(index)" v-if="!map.itemVisible">+ </span> <span
+                            @click="store.viewMap(index)" v-else>-</span> {{
+                                    map.title
+                            }}</h6>
                     <div v-if="map.itemVisible" class="container">
                         <div class="row">
                             <div class="col-4">
@@ -134,6 +129,11 @@ export default {
                     padding: 0.5rem 0.8rem;
                     font-size: 12px;
                     text-transform: uppercase;
+
+                    &:hover {
+                        background-color: $lighter;
+                        color: black;
+                    }
                 }
             }
 
@@ -141,6 +141,10 @@ export default {
                 color: $lighter;
                 margin-right: 1rem;
                 margin-top: 2px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
         }

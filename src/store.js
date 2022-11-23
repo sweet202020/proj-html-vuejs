@@ -74,10 +74,11 @@ export const store = reactive({
     isVisible: false,
     isMapVisible: false,
     dropdown() {
-        this.isVisible = true
+        this.isVisible = !this.isVisible
     },
-    dropdown_cross() {
-        store.isVisible = false
+    viewMap(index) {
+        store.isMapVisible = index
+        store.maps[index].itemVisible = !store.maps[index].itemVisible
     }
 
 })

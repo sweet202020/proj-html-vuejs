@@ -17,7 +17,7 @@ export default {
     <div class="logo  d-flex justify-content-between">
         <img src="../assets/img/avada-music-logo.png" alt="">
         <i v-if="!store.isVisible" @click="store.dropdown" class="fa-solid fa-bars text-white mt-4 me-5"></i>
-        <i v-if="store.isVisible" @click="store.dropdown_cross" class="fa-solid fa-xmark mt-4 me-5"></i>
+        <i v-if="store.isVisible" @click="store.dropdown" class="fa-solid fa-xmark mt-4 me-5"></i>
     </div>
 </template>
 
@@ -29,5 +29,9 @@ export default {
 
 i {
     color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 </style>
